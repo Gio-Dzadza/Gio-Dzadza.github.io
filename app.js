@@ -10,6 +10,7 @@
 //     }
 // } //animacia
 
+
 //
 // let firstAlert = document.querySelector("html");
 //
