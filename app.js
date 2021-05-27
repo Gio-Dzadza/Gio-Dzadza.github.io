@@ -10,7 +10,7 @@
 //     }
 // } //animacia
 
-//
+
 // let firstAlert = document.querySelector("html");
 //
 // firstAlert.onload = function startAlert() {
@@ -42,7 +42,7 @@
 // myButton.onclick = function() {
 //     setUserName();
 // }//saxelis chaweris prompt-ia
-//
+
 // function printName(user){
 //     if(user.isLoggedIn){
 //         return user.firstname + ' ' + user.lastname;
@@ -50,7 +50,7 @@
 //     return false;
 // }
 // console.log(printName(user))// asec Seidzleba
-//
+
 // function myFunction(){
 //     let homeW = document.getElementById('homeworkOption').value;
 //     if (homeW === 'homeWork1'){
@@ -1038,7 +1038,7 @@
 //     input.focus();
 // })
 
-//leqcia 6
+ //leqcia 6
 //zeda funqciebi aris Dom funqciebi, romlebitac htmltan vurtiertobt, magram json-Tan urtiertobistvis es ar gamogvadgeb
 //sxvagvarad davwert kods.
 //
@@ -1123,92 +1123,92 @@
 //roca raime informacias vinaxav, anu es bazashi chawera iqneba tu rame sxva, jobs rom shebvinaxo am json standartis mixedviT, anu gadaviyvano json-shi.
 //tumca tu gaqvs api misamarti sadac vgzavni am informacia, mashin xelit infos json formatshi konvertireba Seidzleba ar iyos sachiro.
 //
-//magaliti:
-const ul1 = document.querySelector('ul');
-const input = document.querySelector('input');
-const button = document.querySelector('button');
-const form = document.querySelector('form');
-const body = document.querySelector('body');
-
-
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    let myItem = input.value;
-
-    ul1.style.listStyleType = 'none';
-
-
-    const ul = document.getElementById('tasks');
-    const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks';
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            let informations = data.data;
-            return informations.map(function (information){
-
-                const listItem1 = document.createElement('li');
-                const checkInput = document.createElement('input');
-                checkInput.type = 'checkbox';
-                const listText = document.createElement('span');
-                const deleteBtn1 = document.createElement('button');
-
-                listItem1.appendChild(checkInput);
-                listItem1.appendChild(listText);
-                listItem1.appendChild(deleteBtn1);
-                deleteBtn1.textContent = 'Delete';
-                ul.appendChild(listItem1);
-
-                checkInput.addEventListener('change', (event) => {
-                    if (event.target.checked) {
-                        listText.style.textDecoration = 'line-through';
-                    } else {
-                        listText.style.textDecoration = 'none';
-                    }
-                });
-
-                deleteBtn1.addEventListener('click', () => {
-                    ul.removeChild(listItem1);
-                });
-
-                listText.innerHTML = information.text;
-            })
-        })
-
-        .catch(error => {
-            console.log(error);
-        });
-
-    const listItem = document.createElement('li');
-    const checkInput = document.createElement('input');
-    checkInput.type = 'checkbox';
-    const listText = document.createElement('span');
-    const deleteBtn2 = document.createElement('button');
-
-    listItem.appendChild(checkInput);
-    listItem.appendChild(listText);
-    listText.textContent = myItem;
-    listItem.appendChild(deleteBtn2);
-    deleteBtn2.textContent = 'Delete';
-    ul1.appendChild(listItem);
-
-    checkInput.addEventListener('change', (event) => {
-        if (event.target.checked) {
-            listText.style.textDecoration = 'line-through';
-        } else {
-            listText.style.textDecoration = 'none';
-        }
-    });
-
-    deleteBtn2.addEventListener('click', () => {
-        ul1.removeChild(listItem);
-    });
-
-    input.value = '';
-    input.focus();
-});
+//magaliti fetch-it:
+// const ul1 = document.querySelector('ul');
+// const input = document.querySelector('input');
+// const button = document.querySelector('button');
+// const form = document.querySelector('form');
+// const body = document.querySelector('body');
+//
+//
+//
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//
+//     let myItem = input.value;
+//
+//     ul1.style.listStyleType = 'none';
+//
+//
+//     const ul = document.getElementById('tasks');
+//     const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks';
+//
+//     fetch(url)
+//         .then(response => response.json())
+//         .then(data => {
+//             let informations = data.data;
+//             return informations.map(function (information){
+//
+//                 const listItem1 = document.createElement('li');
+//                 const checkInput = document.createElement('input');
+//                 checkInput.type = 'checkbox';
+//                 const listText = document.createElement('span');
+//                 const deleteBtn1 = document.createElement('button');
+//
+//                 listItem1.appendChild(checkInput);
+//                 listItem1.appendChild(listText);
+//                 listItem1.appendChild(deleteBtn1);
+//                 deleteBtn1.textContent = 'Delete';
+//                 ul.appendChild(listItem1);
+//
+//                 checkInput.addEventListener('change', (event) => {
+//                     if (event.target.checked) {
+//                         listText.style.textDecoration = 'line-through';
+//                     } else {
+//                         listText.style.textDecoration = 'none';
+//                     }
+//                 });
+//
+//                 deleteBtn1.addEventListener('click', () => {
+//                     ul.removeChild(listItem1);
+//                 });
+//
+//                 listText.innerHTML = information.text;
+//             })
+//         })
+//
+//         .catch(error => {
+//             console.log(error);
+//         });
+//
+//     const listItem = document.createElement('li');
+//     const checkInput = document.createElement('input');
+//     checkInput.type = 'checkbox';
+//     const listText = document.createElement('span');
+//     const deleteBtn2 = document.createElement('button');
+//
+//     listItem.appendChild(checkInput);
+//     listItem.appendChild(listText);
+//     listText.textContent = myItem;
+//     listItem.appendChild(deleteBtn2);
+//     deleteBtn2.textContent = 'Delete';
+//     ul1.appendChild(listItem);
+//
+//     checkInput.addEventListener('change', (event) => {
+//         if (event.target.checked) {
+//             listText.style.textDecoration = 'line-through';
+//         } else {
+//             listText.style.textDecoration = 'none';
+//         }
+//     });
+//
+//     deleteBtn2.addEventListener('click', () => {
+//         ul1.removeChild(listItem);
+//     });
+//
+//     input.value = '';
+//     input.focus();
+// });
 
 //leqcia 7 -
 // //asinqronuli funqciis gamartivebuli chanaweri
@@ -1216,52 +1216,159 @@ form.addEventListener('submit', (e) => {
 // let result = await fetch('https://us-central1-js04-b4877.cloudfunctions.net/tasks')
 // //en nishnavs, imas rom then da catch-is gamoyeneba ar gviwevs, tan shegvidzlia es await gamoviyeno
 
-//slaideri
+//slaideri musha kodi
+const slidesContainer = document.querySelector('.slidesContainer');
+const navigation = document.querySelectorAll('.navigation');
+
+fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides')
+    .then (response => response.json())
+    .then((data) =>{
+        const slides = data;
+        return slides.map(function (slide){
+            const slide1 = document.createElement('div');
+
+            const title1 = document.createElement('span');
+
+            slide1.appendChild(title1);
+            slide1.classList.add('slide');
+            slidesContainer.appendChild(slide1);
+
+            slide1.innerHTML = `<h3 class="title">${slide.title}</h3> <img alt="pic" style="width: 500px" src="${slide.image}">`;
+
+            let currentSlide = 0;
+            const slidecount = slides.length;
+
+            navigation.forEach(button => {
+                button.addEventListener('click', (event)=>{
+                    if (event.target.classList.contains('navigation-prev')){
+                        currentSlide -= 1;
+
+                        if (currentSlide < 0){
+                            currentSlide = slidecount - 1;
+                        }
+                    } else {
+                        currentSlide += 1;
+
+                        if (currentSlide > slidecount - 1){
+                            currentSlide = 0;
+                        }
+                    }
+                    slidesContainer.style.left = '-' + (currentSlide * 500) + 'px';
+                })
+            });
+        })
+    })
+    .catch(error => {
+        console.log(error);
+    })
+
+
+//ar imushava 404 async function getImage() {
+//     let response = await fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides');
+//     let content = await response.json();
+//
+//     let slidesContainer = document.querySelector('.slidesContainer');
+//
+//     let key;
+//
+//     for (key in content) {
+//         slidesContainer.innerHTML += content[key].image;
+//     }
+// }
+// getImage();//??? ver imushava, statusi 404
+
+
+//rodesac mza masivi gvaqvs
 // const slidesContainer = document.querySelector('.slidesContainer');
 // const navigation = document.querySelectorAll('.navigation');
-// //
-// // fetch('...').then((response) => {
-// //     return slides.response;
-// // })
 //
 // const slides = [
-//     {title: 'Slide 1', image: 'http//...'},
-//     {title: 'Slide 2', image: 'http//...'},
-//     {title: 'Slide 3', image: 'http//...'},
-//     {title: 'Slide 4', image: 'http//...'},
+//     {title: 'Slide 1', image: 'http://...'},
+//     {title: 'Slide 2', image: 'http://...'},
+//     {title: 'Slide 3', image: 'http://...'},
 // ];
 //
 // let currentSlide = 0;
-//
-// const slidecount = slides.length;
-//
-//
+// const slideCount = slides.length;
 //
 // navigation.forEach(button => {
-//     button.addEventListener('click', (event)=>{
-//         if (event.target.classList.contains('navigation-prev')){
+//     button.addEventListener('click', (event) => {
+//         if (event.target.classList.contains('navigation-prev')) {
 //             currentSlide -= 1;
 //
-//             if (currentSlide < 0){
-//                 currentSlide = slidecount - 1;
+//             if (currentSlide < 0) {
+//                 currentSlide = slideCount - 1;
 //             }
 //         } else {
 //             currentSlide += 1;
 //
-//             if (currentSlide > slidecount - 1){
+//             if (currentSlide > slideCount - 1) {
 //                 currentSlide = 0;
 //             }
 //         }
+//
 //         slidesContainer.style.left = '-' + (currentSlide * 500) + 'px';
 //     })
 // });
+
+//drois dayeneba setInterval(() => {
+//   // document.querySelector('.navigation-next').click();
+//   currentSlide += 1;
+//   if (currentSlide > slideCount - 1) {
+//     currentSlide = 0;
+//   }
+//   slidesContainer.style.left = '-' + (currentSlide * 500) + 'px';
+// }, 1000)//gilakze dacheris gareshe intervalis dayeneba
+
+
+
+//leqcia 8 node js
+//node js unda davaintaliuro
+//sheidzleba gvqondes moduli, anu calke js failebi, romelic sxvadasxva miznistvis
+//aris gankutvnili, magalitad erti matematikuri formulebistvis erti funqciebisTvis da a.sh.
+//es modulebi shegvidzlia gavaertianot obieqtebad da sxvebistvis martivad gamosayenebeli iqneba
+//rekomendebulia js kodi patarpartara kdebad davwerot da modulebshi gvqondes, vidre yvela kodi erti js failshi iyos.
+// chven shegvidzlia eti cvladi ert failshi shevqmnat da mere is sxvagan gamovidzaxot, sxva ragacaebzec asea, amistvis:
+//im failshi sadac gviweria kodi, romelic gvinda, rom meore failshi shevitano, anu ert failshi agwerili funqcia rom meore failshi shevitano, amistvis:
+//kods vuwer export, win da im failshi sadac gvinda shevitanot, vwert:
+//import {sum//bevri funqcia tu aris mdzimit gamoyof} from './math.js';//sum aris funqciis saxeli, matrh js failis saxeli sadac es funqcia weria,
+//xolo ./ aris misamarti, anu ragac foldershi rom mqondes es math.js, mashin ewereboda './folder/math.js'
+//importdeba obieqti, romlis properti da valuec aris funqciis saxeli.
+//roca bevri funqcia maqv, shemidzlia ert obieqtshi gavaertiano am funqciebis saxelebi da
+//win davuwero export default da importis failshi pirdapir frchxilis gareshe shemidzlia gamovidzaxo, tan aq ukve saxel sar aqvs mnishvneloba, anu:
 //
-// setInterval(()=>{
-//     // document.querySelector('.navigation-next').click(); //an qveda kodi
-//     currentSlide += 1;
+// function sum (x,y){
+//     return x + y;
+// }
 //
-//     if (currentSlide > slidecount - 1) {
-//         currentSlide = 0;
-//     }
-//     slidesContainer.style.left = '-' + (currentSlide * 500) + 'px';
-// },1000)//gilakze dacheris gareshe intervalis dayeneba
+// function devide (x,y){
+//     return x / y;
+// }
+//
+// export default {
+//     sum,
+//     devide
+// }
+//
+// import nebismieriSaxeli from './math.js';//funqciebs aset dros agar uwer am exportebs da importshi frchxilebshi ar chamotvli mat
+//
+//es import da export mushaobs mashin, roca node js aris chawerili.
+//node-ze rom shegvedzlos mati gamoyeneba, amistvis mtavar foldershi unda iyos faili, saxelad package.json, sadac unda eweros
+//{"type":"module"}//sxvagvarad ar imushavebs.
+//
+//
+//npm aris modulebis dasainstalirebeli da mati gamoyenebistvis sachiro programa
+//roca bibliotekidan mogvaqvs informacia.
+//
+//githubze atvirtvisdasa roca gvinda, rom bibliotekis folderi ar aiitanos
+//amistvis proeqtshi vqmnit fails saxels vawert .gitignore da shignit vwert im folderis saxelebs, romelic gvinda, rom daignordes.
+//
+//
+//bibliotekidan kodis gamosayeneblad import kodshi folderis misamartis adgilas, vwert bibliotekis saxels da figurul frchxilebshi vwert funqciis saxels.
+//
+
+//leqcia 9 debugging
+//martivi da primitiuli metodi debagingisTvis aris console log. tu consolshi ar brundebaswori parametrebi mashiun kodshi aris shecdoma.
+//ufro martivad shegvidzlia debugger gamoviyenot redaqtoris,es aqvs vs code-sac da webstorm-sac.
+//debugger sashualebas idzleba kodi xazebis mixedviT SevamowmoT sad iZleva shecdeomas.
+//aseve shesadzlebelia qromis debuggeri gamoviyenot, amistvis unda shevidet gverdis inspectshi da source-shi gadavidet, danarCeni igivea.

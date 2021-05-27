@@ -233,12 +233,13 @@ button {
     height: 300px;
     overflow: hidden;
     background-color: green;
+    margin: 10px auto;
 }
 .slidesContainer{
     width: 1500px;
     background-color: purple;
     display: flex;
-    height: 100px;
+    height: 100%;
     position: relative;
     left: 0;
     transition: left 500ms;
@@ -246,4 +247,24 @@ button {
 .slide{
     flex: 1;
     height: 100%;
+}
+.title{
+    position: absolute;
+    color: #ff6666;
+    width: 100px;
+}
+.buttons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.navigation{
+    background-color: #0069d9;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 25px;
+}
+.navigation:focus{
+    outline: none;
 }
