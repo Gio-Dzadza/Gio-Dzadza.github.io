@@ -11,161 +11,407 @@
 // } //animacia
 
 
-// let firstAlert = document.querySelector("html");
-//
-// firstAlert.onload = function startAlert() {
-//     setUserName()
-// }//gaxsnisas an gadatvirtvisasa sul amoagdebs alerts, amistvis onload-s viyeneb
-//
-// let myButton = document.getElementById('changeButton');
-// let myHeading = document.getElementById('choose');
-//
-// function setUserName() {
-//     let myName = prompt('Please enter your name.');
-//     if(!myName) {
-//         setUserName();
-//     } else {
-//         sessionStorage.setItem('name', myName);//sessionStorage- aris brauzeris shidfa mexsiereba da setItem-it iq inaxav mnishvnelobas//sessionStorage-shi name paremetrs mivaniche myName mnishvneloba
-//         myHeading.textContent = 'Choose the Homework, ' + myName;//textContent-it kontents vanicheb, anu ra gamoitanos am tegshi imas vuwer
-//     }
-//     sessionStorage.setItem('name', myName);
-//     myHeading.textContent = 'Choose the Homework, ' + myName;
-// }
-//
-// if(!sessionStorage.getItem('name')) {
-//     setUserName();
-// } else {
-//     let storedName = sessionStorage.getItem('name');
-//     myHeading.textContent = 'Choose the Homework, ' + storedName;
-// }
-//
-// myButton.onclick = function() {
-//     setUserName();
-// }//saxelis chaweris prompt-ia
+let firstAlert = document.querySelector("html");
 
-// function printName(user){
-//     if(user.isLoggedIn){
-//         return user.firstname + ' ' + user.lastname;
-//     }
-//     return false;
-// }
-// console.log(printName(user))// asec Seidzleba
+firstAlert.onload = function startAlert() {
+    setUserName()
+}//gaxsnisas an gadatvirtvisasa sul amoagdebs alerts, amistvis onload-s viyeneb
 
-// function myFunction(){
-//     let homeW = document.getElementById('homeworkOption').value;
-//     if (homeW === 'homeWork1'){
-//         document.getElementById('homework11').style.display = 'block';
-//         document.getElementById('homework2').style.display = 'none';
-//         document.getElementById('homework3').style.display = 'none';
-//         document.getElementById('homework4').style.display = 'none';
-//         document.getElementById('homework5').style.display = 'none';
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if (homeW === 'homeWork2'){
-//         document.getElementById('homework2').style.display = 'block';
-//         document.getElementById('homework11').style.display = 'none';
-//         document.getElementById('homework3').style.display = 'none';
-//         document.getElementById('homework4').style.display = 'none';
-//         document.getElementById('homework5').style.display = 'none';
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if(homeW === 'homeWork3'){
-//         document.getElementById('homework2').style.display = 'none';
-//         document.getElementById('homework11').style.display = 'none';
-//         document.getElementById('homework3').style.display = 'block';
-//         document.getElementById('homework4').style.display = 'none';
-//         document.getElementById('homework5').style.display = 'none';
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     }else if(homeW === 'homeWork4'){
-//         document.getElementById('homework2').style.display = 'none';
-//         document.getElementById('homework11').style.display = 'none';
-//         document.getElementById('homework3').style.display = 'none';
-//         document.getElementById('homework4').style.display = 'block';
-//         document.getElementById('homework5').style.display = 'none';
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     }else if(homeW === 'homeWork5'){
-//         document.getElementById('homework2').style.display = 'none';
-//         document.getElementById('homework11').style.display = 'none';
-//         document.getElementById('homework3').style.display = 'none';
-//         document.getElementById('homework4').style.display = 'none';
-//         document.getElementById('homework5').style.display = 'block';
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if (homeW === 'nothing'){
-//         document.getElementById('homework2').style.display = 'none';
-//         document.getElementById('homework11').style.display = 'none';
-//         document.getElementById('homework3').style.display = 'none';
-//         document.getElementById('homework4').style.display = 'none';
-//         document.getElementById('homework5').style.display = 'none';
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     }
-// }
+let myButton = document.getElementById('changeButton');
+let myHeading = document.getElementById('choose');
+
+function setUserName() {
+    let myName = prompt('Please enter your name.');
+    if(!myName) {
+        setUserName();
+    } else {
+        sessionStorage.setItem('name', myName);//sessionStorage- aris brauzeris shidfa mexsiereba da setItem-it iq inaxav mnishvnelobas//sessionStorage-shi name paremetrs mivaniche myName mnishvneloba
+        myHeading.textContent = 'Choose the Homework, ' + myName;//textContent-it kontents vanicheb, anu ra gamoitanos am tegshi imas vuwer
+    }
+    sessionStorage.setItem('name', myName);
+    myHeading.textContent = 'Choose the Homework, ' + myName;
+}
+
+if(!sessionStorage.getItem('name')) {
+    setUserName();
+} else {
+    let storedName = sessionStorage.getItem('name');
+    myHeading.textContent = 'Choose the Homework, ' + storedName;
+}
+
+myButton.onclick = function() {
+    setUserName();
+}//saxelis chaweris prompt-ia
+
+// // function printName(user){
+// //     if(user.isLoggedIn){
+// //         return user.firstname + ' ' + user.lastname;
+// //     }
+// //     return false;
+// // }
+// // console.log(printName(user))// asec Seidzleba
 //
-// function clickChange(){
-//     let homeW = document.getElementById('homeworkOption').value;
-//     if (homeW === 'homeWork1'){
-//         document.getElementById('result1').style.display = 'block';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if(homeW === 'homeWork2'){
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'block';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if(homeW === 'homeWork3'){
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'block';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if(homeW === 'homeWork4'){
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'block';
-//         document.getElementById('result5').style.display = 'none';
-//     } else if(homeW === 'homeWork5'){
-//         document.getElementById('result1').style.display = 'none';
-//         document.getElementById('result2').style.display = 'none';
-//         document.getElementById('result3').style.display = 'none';
-//         document.getElementById('result4').style.display = 'none';
-//         document.getElementById('result5').style.display = 'block';
-//     }
-// }
+function myFunction(){
+    let homeW = document.getElementById('homeworkOption').value;
+    if (homeW === 'homeWork11'){
+        document.getElementById('homework111').style.display = 'block';
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'homeWork22'){
+        document.getElementById('homework22').style.display = 'block';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork33'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'block';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    }else if(homeW === 'homeWork44'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'block';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    }else if(homeW === 'homeWork55'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'block';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'nothing1'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'homeWork66'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'block';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'homeWork77'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'block';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'homeWork88'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'block';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'homeWork99'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'block';
+        document.getElementById('homework10').style.display = 'none';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if (homeW === 'homeWork10'){
+        document.getElementById('homework22').style.display = 'none';
+        document.getElementById('homework111').style.display = 'none';
+        document.getElementById('homework33').style.display = 'none';
+        document.getElementById('homework44').style.display = 'none';
+        document.getElementById('homework55').style.display = 'none';
+        document.getElementById('homework66').style.display = 'none';
+        document.getElementById('homework77').style.display = 'none';
+        document.getElementById('homework88').style.display = 'none';
+        document.getElementById('homework99').style.display = 'none';
+        document.getElementById('homework10').style.display = 'block';
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    }
+}
+
+function clickChange(){
+    let homeW = document.getElementById('homeworkOption').value;
+    if (homeW === 'homeWork11'){
+        document.getElementById('result11').style.display = 'block';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork22'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'block';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork33'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'block';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork44'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'block';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork55'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'block';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork66'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'block';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork77'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'block';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork88'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'block';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'none';
+    }else if(homeW === 'homeWork99'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'block';
+        document.getElementById('result10').style.display = 'none';
+    } else if(homeW === 'homeWork10'){
+        document.getElementById('result11').style.display = 'none';
+        document.getElementById('result22').style.display = 'none';
+        document.getElementById('result33').style.display = 'none';
+        document.getElementById('result44').style.display = 'none';
+        document.getElementById('result55').style.display = 'none';
+        document.getElementById('result66').style.display = 'none';
+        document.getElementById('result77').style.display = 'none';
+        document.getElementById('result88').style.display = 'none';
+        document.getElementById('result99').style.display = 'none';
+        document.getElementById('result10').style.display = 'block';
+    }
+}
 
 // davalebebi N1:
 // დავალება 1
-
 // let arr = ['javascript', 'php', 'c#', 'python', 'c++', 'kotlin', 'c', 'swift'];
 //
 // for (let x = 0; x < arr.length; x++){
 //     if(arr[x].length>=5){
 //         console.log(arr[x]) } }//es mqonda me
-
+//
+//meore versia
+//
 // let arr = ['javascript', 'php', 'c#', 'python', 'c++', 'kotlin', 'c', 'swift'];
 //
 // for (let x = 0; x<arr.length; x++){
@@ -175,16 +421,14 @@
 //     }
 //     console.log(item)
 // }//es aris ufro swori
-
-
-
+//
 //
 // //დავალება 2
 //
 // let arr2 = [2, -3, 5, 11, 1, -30, -11, 100, -1, -3, -4];
 //
-// for (let x = 0; x<arr.length; x++){
-//     if(arr[x]>0){
+// for (let x = 0; x<arr2.length; x++){
+//     if(arr2[x]>0){
 //         console.log(arr2[x])
 //     }
 // }
@@ -199,9 +443,7 @@
 //         }
 //     }
 // }
-
-
-
+//
 //დავალება 4
 // let arr4 = [1, 15, 6, "giorgi", 70, 30, 809, 25];
 //
@@ -215,7 +457,7 @@
 //     return max;
 // }
 // console.log(getMax(arr4));//swori gadawyveta aris es
-
+//
 // let arr4 = [1, 15, 6, "giorgi", 70, 30, 25];
 //
 // let getMaximum = function (arr){
@@ -226,19 +468,15 @@
 // }
 //
 // getMaximum(arr4);//esec swori gadawyvetaa
-
-
+//
 // function getMax(x){
 //     console.log(Math.max(..x));
 // }
 // getMax([1,15,6,70,30,25]); ar imuSava
-
-
-/* let arr4 = [1, 15, 6, 70, 30, 25];
- // console.log(Math.max(...arr4));*//*es arasworia, radgan cifrebze muSaobs math*/
-
+// let arr4 = [1, 15, 6, 70, 30, 25];
+// console.log(Math.max(...arr4));//es arasworia, radgan cifrebze muSaobs math
+//
 //დავალება 5
-
 // let user = {
 //     firstname: 'giorgi',
 //     lastname: 'saakadze',
@@ -255,10 +493,11 @@
 // }
 // printName(user)
 
-// mtvleli let x = 0;
-// let button = document.querySelector("button")
+// mtvleli
+// let x = 0;
+// let buttonClick = document.querySelector("button")
 //
-// button.onclick = function (){
+// buttonClick.onclick = function (){
 //     document.querySelector("p").innerHTML = x++;
 // }//mtvleli
 //
@@ -269,7 +508,7 @@
 //     sessionStorage.setItem('x', container);
 //     show.textContent = container;
 //     document.querySelector("p").innerHTML = x = null;
-// }//mtvleli wamshleli gilakit
+//}//mtvleli wamshleli gilakit
 //
 // let timer = new Date("00, 00:00:00:00").getTime();
 //
@@ -291,7 +530,6 @@
 // }
 // console.log(y);//dabechdavs jams
 
-
 // karuseli
 // let source = document.getElementById('pic');
 //
@@ -306,7 +544,6 @@
 //     }
 // }
 // Cermi gakeTebuli daklikebadi karuseli, fotoebis mcvleli.
-
 
 //leqcia 3
 //funqciis deklaracia qvia aset nawers:
@@ -526,7 +763,6 @@
 // console.log(concat)//dabechdavs 15-s
 
 //davalebebi N2
-
 //davaleba 1:
 //
 // let words = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit.', 'Nullam', 'lectus', 'quam']
@@ -1038,7 +1274,7 @@
 //     input.focus();
 // })
 
- //leqcia 6
+//leqcia 6
 //zeda funqciebi aris Dom funqciebi, romlebitac htmltan vurtiertobt, magram json-Tan urtiertobistvis es ar gamogvadgeb
 //sxvagvarad davwert kods.
 //
@@ -1123,92 +1359,91 @@
 //roca raime informacias vinaxav, anu es bazashi chawera iqneba tu rame sxva, jobs rom shebvinaxo am json standartis mixedviT, anu gadaviyvano json-shi.
 //tumca tu gaqvs api misamarti sadac vgzavni am informacia, mashin xelit infos json formatshi konvertireba Seidzleba ar iyos sachiro.
 //
+
 //magaliti fetch-it:
-// const ul1 = document.querySelector('ul');
-// const input = document.querySelector('input');
-// const button = document.querySelector('button');
-// const form = document.querySelector('form');
-// const body = document.querySelector('body');
-//
-//
-//
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//
-//     let myItem = input.value;
-//
-//     ul1.style.listStyleType = 'none';
-//
-//
-//     const ul = document.getElementById('tasks');
-//     const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks';
-//
-//     fetch(url)
-//         .then(response => response.json())
-//         .then(data => {
-//             let informations = data.data;
-//             return informations.map(function (information){
-//
-//                 const listItem1 = document.createElement('li');
-//                 const checkInput = document.createElement('input');
-//                 checkInput.type = 'checkbox';
-//                 const listText = document.createElement('span');
-//                 const deleteBtn1 = document.createElement('button');
-//
-//                 listItem1.appendChild(checkInput);
-//                 listItem1.appendChild(listText);
-//                 listItem1.appendChild(deleteBtn1);
-//                 deleteBtn1.textContent = 'Delete';
-//                 ul.appendChild(listItem1);
-//
-//                 checkInput.addEventListener('change', (event) => {
-//                     if (event.target.checked) {
-//                         listText.style.textDecoration = 'line-through';
-//                     } else {
-//                         listText.style.textDecoration = 'none';
-//                     }
-//                 });
-//
-//                 deleteBtn1.addEventListener('click', () => {
-//                     ul.removeChild(listItem1);
-//                 });
-//
-//                 listText.innerHTML = information.text;
-//             })
-//         })
-//
-//         .catch(error => {
-//             console.log(error);
-//         });
-//
-//     const listItem = document.createElement('li');
-//     const checkInput = document.createElement('input');
-//     checkInput.type = 'checkbox';
-//     const listText = document.createElement('span');
-//     const deleteBtn2 = document.createElement('button');
-//
-//     listItem.appendChild(checkInput);
-//     listItem.appendChild(listText);
-//     listText.textContent = myItem;
-//     listItem.appendChild(deleteBtn2);
-//     deleteBtn2.textContent = 'Delete';
-//     ul1.appendChild(listItem);
-//
-//     checkInput.addEventListener('change', (event) => {
-//         if (event.target.checked) {
-//             listText.style.textDecoration = 'line-through';
-//         } else {
-//             listText.style.textDecoration = 'none';
-//         }
-//     });
-//
-//     deleteBtn2.addEventListener('click', () => {
-//         ul1.removeChild(listItem);
-//     });
-//
-//     input.value = '';
-//     input.focus();
-// });
+const ul1 = document.querySelector('ul');
+const input = document.querySelector('input');
+const form = document.getElementById('formSecond');
+
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let myItem = input.value;
+
+    ul1.style.listStyleType = 'none';
+
+
+    const ul = document.getElementById('tasks');
+    const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks';
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            let informations = data.data;
+            return informations.map(function (information){
+
+                const listItem1 = document.createElement('li');
+                const checkInput = document.createElement('input');
+                checkInput.type = 'checkbox';
+                const listText = document.createElement('span');
+                const deleteBtn1 = document.createElement('button');
+
+                listItem1.appendChild(checkInput);
+                listItem1.appendChild(listText);
+                listItem1.appendChild(deleteBtn1);
+                deleteBtn1.textContent = 'Delete';
+                ul.appendChild(listItem1);
+
+                checkInput.addEventListener('change', (event) => {
+                    if (event.target.checked) {
+                        listText.style.textDecoration = 'line-through';
+                    } else {
+                        listText.style.textDecoration = 'none';
+                    }
+                });
+
+                deleteBtn1.addEventListener('click', () => {
+                    ul.removeChild(listItem1);
+                });
+
+                listText.innerHTML = information.text;
+            })
+        })
+
+        .catch(error => {
+            console.log(error);
+        });
+
+    const listItem = document.createElement('li');
+    const checkInput = document.createElement('input');
+    checkInput.type = 'checkbox';
+    const listText = document.createElement('span');
+    const deleteBtn2 = document.createElement('button');
+
+    listItem.appendChild(checkInput);
+    listItem.appendChild(listText);
+    listText.textContent = myItem;
+    listItem.appendChild(deleteBtn2);
+    deleteBtn2.textContent = 'Delete';
+    ul1.appendChild(listItem);
+
+    checkInput.addEventListener('change', (event) => {
+        if (event.target.checked) {
+            listText.style.textDecoration = 'line-through';
+        } else {
+            listText.style.textDecoration = 'none';
+        }
+    });
+
+    deleteBtn2.addEventListener('click', () => {
+        ul1.removeChild(listItem);
+    });
+
+    input.value = '';
+    input.focus();
+});
 
 //leqcia 7 -
 // //asinqronuli funqciis gamartivebuli chanaweri
@@ -1261,7 +1496,6 @@ fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides')
     .catch(error => {
         console.log(error);
     })
-
 
 //ar imushava 404 async function getImage() {
 //     let response = await fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides');
@@ -1319,7 +1553,6 @@ fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides')
 //   }
 //   slidesContainer.style.left = '-' + (currentSlide * 500) + 'px';
 // }, 1000)//gilakze dacheris gareshe intervalis dayeneba
-
 
 
 //leqcia 8 node js

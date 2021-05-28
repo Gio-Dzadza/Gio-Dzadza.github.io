@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,167 +35,281 @@
 <!--</div>-->
 <!--&lt;!&ndash;</div>&ndash;&gt;animacia-->
 
-<!--<div class="buttonClass">-->
-<!--    <button class="button" id="changeButton">Change Name</button>-->
-<!--</div>-->
-<!--<form class="forma">-->
-<!--    <label class="Choose" id="choose">-->
-<!--    </label>-->
-<!--    <select class="HomeWork" name="Homework" id="homeworkOption" onchange="myFunction()">-->
-<!--        <option value="nothing"></option>-->
-<!--        <option value="homeWork1">დავალება 1 - reduce ყოველი მეორე სიტყვა აპერქეისით</option>-->
-<!--        <option value="homeWork2">დავალება 2 - filter შეიცავს M</option>-->
-<!--        <option value="homeWork3">დავალება 3 - დავალება 2 arrow function</option>-->
-<!--        <option value="homeWork4">დავალება 4 - map</option>-->
-<!--        <option value="homeWork5">დავალება 5 - filter, map 18 წელს ზემოთ ასაკის სახელები</option>-->
-<!--    </select>-->
-<!--</form>-->
-<!--<div class="results">-->
-<!--    <b style="margin-left: 25px">Results:</b>-->
-<!--    <div class="homeworkCont">-->
-<!--        <label class="jsCode">-->
-<!--                JS Code:-->
-<!--        </label>-->
-<!--        <div class="codeWritten1" id="homework11">-->
-<!--                    <p>-->
-<!--                        let words = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit.', 'Nullam', 'lectus', 'quam']<br><br>-->
-
-<!--                        let result = words.reduce((acc, cur, index)=>{<br>-->
-<!--                        if (index % 2 === 1){<br>-->
-<!--                        acc = acc + cur.toUpperCase() + ' ';<br>-->
-<!--                        } else{<br>-->
-<!--                        acc= acc + cur + ' ';<br>-->
-<!--                        }<br>-->
-<!--                        return acc<br>-->
-<!--                        },'')<br>-->
-<!--                        console.log(result)-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--        <div class="codeWritten2" id="homework2">-->
-<!--                    <p>-->
-<!--                        let words1 = ['Madrid', 'Rome', 'Berlin', 'Barcelona', 'Milan', 'Batumi']<br><br>-->
-
-<!--                        let result1 = words1.filter((value)=>{<br>-->
-<!--                        if (value.includes('m')){<br>-->
-<!--                        return value<br>-->
-<!--                        } else if (value.includes('M')){<br>-->
-<!--                        return value<br>-->
-<!--                        }<br>-->
-<!--                        })<br>-->
-<!--                        console.log(result1)-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--        <div class="codeWritten3" id="homework3">-->
-<!--                    <p>-->
-<!--                        let words2 = ['Madrid', 'Rome', 'Berlin', 'Barcelona', 'Milan', 'Batumi']<br>.filter((value)=> value.includes('m') || value.includes('M'));<br>-->
-<!--                        console.log(words2)-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--        <div class="codeWritten4" id="homework4">-->
-<!--                    <p>-->
-<!--                        let items = [12, 'Google', 32, null, undefined, 'yahoo', 0, 'bing']<br><br>-->
-
-<!--                        let result2 = items.map((value)=>{<br>-->
-<!--                        if(typeof value === "number"){<br>-->
-<!--                        return value * value<br>-->
-<!--                        }else if (typeof value === "string"){<br>-->
-<!--                        return value.toUpperCase()<br>-->
-<!--                        }<br>-->
-<!--                        return value<br>-->
-<!--                        })<br>-->
-<!--                        console.log(result2)-->
-
-<!--                    </p>-->
-<!--                </div>-->
-<!--        <div class="codeWritten5" id="homework5">-->
-<!--                    <p>-->
-<!--                        let users = [<br>-->
-<!--                        {name: 'giorgi', age: 16},<br>-->
-<!--                        {name: 'levani', age: 90},<br>-->
-<!--                        {name: 'nino', age: 30},<br>-->
-<!--                        {name: 'otari', age: 11},<br>-->
-<!--                        {name: 'mari', age: 28}<br>-->
-<!--                        ]<br><br>-->
-
-<!--                        let result3 = users.filter((value)=>{<br>-->
-<!--                        if (value.age >= 18){<br>-->
-<!--                        return value<br>-->
-<!--                        }<br>-->
-<!--                        })<br>-->
-<!--                        .map((value) => {<br>-->
-<!--                        return value.name<br>-->
-<!--                        })<br>-->
-
-<!--                        console.log(result3.join(' '))-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--        <button class="runner" id="codeRunner" onclick="clickChange()">Run code</button>-->
-<!--    </div>-->
-<!--    <div class="result">-->
-<!--        Result:-->
-<!--        <div class="Result1" id="result1">-->
-<!--            Lorem IPSUM dolor SIT <br> amet CONSECTETUR adipiscing ELIT.<br> Nullam LECTUS quam-->
-<!--        </div>-->
-<!--        <div class="Result2" id="result2">-->
-<!--            (4)<br>["Madrid", "Rome", "Milan", "Batumi"]-->
-<!--        </div>-->
-<!--        <div class="Result3" id="result3">-->
-<!--            (4)<br>["Madrid", "Rome", "Milan", "Batumi"]-->
-<!--        </div>-->
-<!--        <div class="Result4" id="result4">-->
-<!--            (8)<br>[144, "GOOGLE", 1024, null, undefined, <br>"YAHOO", 0, "BING"]-->
-<!--        </div>-->
-<!--        <div class="Result5" id="result5">-->
-<!--            levani nino mari-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
+<!--mTvleli-->
 <!--<button>click me</button>-->
 <!--<button id="clear">clear</button>-->
 <!--<p>-->
 <!--</p>-->
 <!--<h1></h1>-->
 <!--<h2></h2>-->
-<!--<div class="picture">-->
-<!--    <a href="#" class="cliCont" id="touch1" onclick="carChanger()"> <div class="zeti"> < </div>-->
-<!--    </a>-->
-<!--    <img src="10best-cars-group-cropped-1542126037.jpg" alt="pic" id="pic">-->
-<!--    <a href="#" class="cliCont2" id="touch2" onclick="carChanger()"> <div class="zeti2"> > </div>-->
-<!--    </a>-->
-<!--</div>-->
-<!--&lt;!&ndash;</div>&ndash;&gt; karuselis html kodi-->
 
-<!--&lt;!&ndash; magaliti tvalsachinoebistvis, leqcia 5 fetch &ndash;&gt;-->
-<!--<h1>My Tasks</h1>-->
+<!--    <div class="chemislideri">-->
+<!--        <div class="picture">-->
+<!--            <a href="#" class="cliCont" id="touch1" onclick="carChanger()"> <div class="zeti"> < </div>-->
+<!--            </a>-->
+<!--            <img src="10best-cars-group-cropped-1542126037.jpg" alt="pic" id="pic">-->
+<!--            <a href="#" class="cliCont2" id="touch2" onclick="carChanger()"> <div class="zeti2"> > </div>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt; karuselis html kodi&ndash;&gt;-->
 
-<!--<div>-->
-<!--    <form action="">-->
-<!--        <input type="text" name="item" id="item" class="input1">-->
-<!--        <button type="submit" id="addItem">Add item</button>-->
-<!--    </form>-->
-<!--</div>-->
+<div class="savarjiSoebi">
+        <div class="davaleba12">
+            <h5>პირველი და მეორე დავალებები</h5>
+            <div class="buttonClass">
+                <button class="button" id="changeButton">Change Name</button>
+            </div>
+            <form class="forma">
+                <label class="Choose" id="choose">
+                </label>
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <select class="HomeWork" name="Homework" id="homeworkOption" onchange="myFunction()">
+                    <option value="nothing1"></option>
+                    <option value="homeWork11">დავალება 1 - reduce ყოველი მეორე სიტყვა აპერქეისით</option>
+                    <option value="homeWork22">დავალება 2 - filter შეიცავს M</option>
+                    <option value="homeWork33">დავალება 3 - დავალება 2 arrow function</option>
+                    <option value="homeWork44">დავალება 4 - map</option>
+                    <option value="homeWork55">დავალება 5 - filter, map 18 წელს ზემოთ ასაკის სახელები</option>
+                    <option value="homeWork66">დავალება 6 - for და continue 5 სიმბოლოზე ნაკლები</option>
+                    <option value="homeWork77">დავალება 7 - for დადებითი რიცხვები</option>
+                    <option value="homeWork88">დავალება 8 - for დადებითი რიცხვები, მასივის მასივიდან</option>
+                    <option value="homeWork99">დავალება 9 - მაქსიმალური რიცხვი მასივიდან</option>
+                    <option value="homeWork10">დავალება 10 - ობიექტიდან დაბეჭდე სახელი და გვარი</option>
+                </select>
+            </form>
+            <div class="results">
+                <b style="margin-left: 25px">Results:</b>
+                <div class="homeworkCont">
+                    <label class="jsCode">
+                        JS Code:
+                    </label>
+                    <div class="codeWritten1" id="homework111">
+                        <p>
+                            let words = ['Lorem', 'ipsum', 'dolor', 'sit', 'amet', 'consectetur', 'adipiscing', 'elit.', 'Nullam', 'lectus', 'quam']<br><br>
 
-<!--<ul>-->
+                            let result = words.reduce((acc, cur, index)=>{<br>
+                            if (index % 2 === 1){<br>
+                            acc = acc + cur.toUpperCase() + ' ';<br>
+                            } else{<br>
+                            acc= acc + cur + ' ';<br>
+                            }<br>
+                            return acc<br>
+                            },'')<br>
+                            console.log(result)
+                        </p>
+                    </div>
+                    <div class="codeWritten2" id="homework22">
+                        <p>
+                            let words1 = ['Madrid', 'Rome', 'Berlin', 'Barcelona', 'Milan', 'Batumi']<br><br>
 
-<!--</ul>-->
+                            let result1 = words1.filter((value)=>{<br>
+                            if (value.includes('m')){<br>
+                            return value<br>
+                            } else if (value.includes('M')){<br>
+                            return value<br>
+                            }<br>
+                            })<br>
+                            console.log(result1)
+                        </p>
+                    </div>
+                    <div class="codeWritten3" id="homework33">
+                        <p>
+                            let words2 = ['Madrid', 'Rome', 'Berlin', 'Barcelona', 'Milan', 'Batumi']<br>.filter((value)=> value.includes('m') || value.includes('M'));<br>
+                            console.log(words2)
+                        </p>
+                    </div>
+                    <div class="codeWritten4" id="homework44">
+                        <p>
+                            let items = [12, 'Google', 32, null, undefined, 'yahoo', 0, 'bing']<br><br>
 
-<!--<div id="data">-->
-<!--    <h1>Tasks</h1>-->
-<!--    <ul id="tasks"></ul>-->
-<!--</div>-->
+                            let result2 = items.map((value)=>{<br>
+                            if(typeof value === "number"){<br>
+                            return value * value<br>
+                            }else if (typeof value === "string"){<br>
+                            return value.toUpperCase()<br>
+                            }<br>
+                            return value<br>
+                            })<br>
+                            console.log(result2)
 
-<!--slaideri-->
-<div class="slider">
-    <div class="slidesContainer">
-    </div>
+                        </p>
+                    </div>
+                    <div class="codeWritten5" id="homework55">
+                        <p>
+                            let users = [<br>
+                            {name: 'giorgi', age: 16},<br>
+                            {name: 'levani', age: 90},<br>
+                            {name: 'nino', age: 30},<br>
+                            {name: 'otari', age: 11},<br>
+                            {name: 'mari', age: 28}<br>
+                            ]<br><br>
+
+                            let result3 = users.filter((value)=>{<br>
+                            if (value.age >= 18){<br>
+                            return value<br>
+                            }<br>
+                            })<br>
+                            .map((value) => {<br>
+                            return value.name<br>
+                            })<br>
+
+                            console.log(result3.join(' '))
+                        </p>
+                    </div>
+                    <div class="codeWritten6" id="homework66">
+                        <p>
+                            let arr = ['javascript', 'php', 'c#', 'python', 'c++', 'kotlin', 'c', 'swift'];<br>
+
+                            for (let x = 0; x< arr.length; x++){<br>
+                            const item = arr[x];<br>
+                            if(item.length>=5){<br>
+                            continue<br>
+                            }<br>
+                            console.log(item)<br>
+                            }<br>
+                        </p>
+                    </div>
+                    <div class="codeWritten7" id="homework77">
+                        <p>
+                            let arr2 = [2, -3, 5, 11, 1, -30, -11, 100, -1, -3, -4];<br><br>
+
+                            for (let x = 0; x< arr2.length; x++){<br>
+                            if(arr2[x]>0){<br>
+                            console.log(arr2[x])<br>
+                            }<br>
+                            }<br>
+                        </p>
+                    </div>
+                    <div class="codeWritten8" id="homework88">
+                        <p>
+                            let arr3 = [[2, -3, 5, 11], [1, -30, -11, 100], [-1, -3, -4]];<br><br>
+
+                            for (let x in arr3){<br>
+                            for(let y in arr3[x]){<br>
+                            if(arr3[x][y]>0){<br>
+                            console.log(arr3[x][y])<br>
+                            }<br>
+                            }<br>
+                            }
+                        </p>
+                    </div>
+                    <div class="codeWritten9" id="homework99">
+                        <p>
+                            let arr4 = [1, 15, 6, "giorgi", 70, 30, 809, 25];<br><br>
+
+                            function getMax(numbers){<br>
+                            let max = 0<br>
+                            for (let i = 0; i < numbers.length; i++){<br>
+                            if (numbers[i]> max){<br>
+                            max = numbers[i];<br>
+                            }<br>
+                            }<br>
+                            return max;<br>
+                            }<br>
+                            console.log(getMax(arr4));<br>
+                        </p>
+                    </div>
+                    <div class="codeWritten10" id="homework10">
+                        <p>
+                            let user = {<br>
+                            firstname: 'giorgi',<br>
+                            lastname: 'saakadze',<br>
+                            age: 32,<br>
+                            isLoggedIn: true<br>
+                            }<br><br>
+
+                            function printName(x){<br>
+                            if(x.isLoggedIn === true){<br>
+                            console.log(x.firstname + ' ' + x.lastname)<br>
+                            }else {<br>
+                            console.log('false')<br>
+                            }<br>
+                            }<br>
+                            printName(user)<br>
+                        </p>
+                    </div>
+                    <button class="runner" id="codeRunner1" onclick="clickChange()">Run code</button>
+                    <div class="result">
+                        Result:
+                        <div class="Result1" id="result11">
+                            Lorem IPSUM dolor SIT <br> amet CONSECTETUR adipiscing ELIT.<br> Nullam LECTUS quam
+                        </div>
+                        <div class="Result2" id="result22">
+                            (4)<br>["Madrid", "Rome", "Milan", "Batumi"]
+                        </div>
+                        <div class="Result3" id="result33">
+                            (4)<br>["Madrid", "Rome", "Milan", "Batumi"]
+                        </div>
+                        <div class="Result4" id="result44">
+                            (8)<br>[144, "GOOGLE", 1024, null, undefined, <br>"YAHOO", 0, "BING"]
+                        </div>
+                        <div class="Result5" id="result55">
+                            levani nino mari
+                        </div>
+                        <div class="Result6" id="result66">
+                            php <br>
+                            c# <br>
+                            c++ <br>
+                            c<br>
+                        </div>
+                        <div class="Result7" id="result77">
+                            2<br>
+                            5<br>
+                            11<br>
+                            1<br>
+                            100<br>
+                        </div>
+                        <div class="Result8" id="result88">
+                            2<br>
+                            5<br>
+                            11<br>
+                            1<br>
+                            100<br>
+                        </div>
+                        <div class="Result9" id="result99">
+                            809
+                        </div>
+                        <div class="Result10" id="result10">
+                            giorgi saakadze
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="davaleba3"><!--&lt;!&ndash; magaliti tvalsachinoebistvis, leqcia 5 fetch &ndash;&gt;-->
+            <h5>მესამე დავალება</h5>
+            <h1>My Tasks</h1>
+
+            <div>
+                <form action="" id="formSecond">
+                    <input type="text" name="item" id="item" class="input1">
+                    <button type="submit" id="addItem">Add item</button>
+                </form>
+            </div>
+
+            <ul>
+
+            </ul>
+
+            <div id="data">
+                <h1>Tasks</h1>
+                <ul id="tasks"></ul>
+            </div>
+        </div>
+        <!--slaideri-->
+        <div class="davaleba4">
+            <h5>მეოთხე დავალება</h5>
+            <div class="slider">
+                <div class="slidesContainer">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="navigation navigation-prev">Prev slide</button>
+                <button class="navigation navigation-next">Next slide</button>
+            </div>
+        </div>
 </div>
-
-<div class="buttons">
-    <button class="navigation navigation-prev">Prev slide</button>
-    <button class="navigation navigation-next">Next slide</button>
-</div>
-
 
 <script type="text/javascript" src="app.js"></script>
 </body>

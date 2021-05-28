@@ -48,14 +48,16 @@
 .results .homeworkCont{
     flex-grow: 1;
     border: 1px solid black;
-    height: 620px;
-    position: absolute;
-    width: 100%;
+    height: auto;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
 }
 .results .homeworkCont .jsCode{
-    margin-left:25px;
+    margin-left: 25px;
     margin-top: 20px;
     font-weight: bold;
+    height: 610px;
 }
 .codeWritten1{
     width: 50%;
@@ -64,6 +66,7 @@
     position: absolute;
     margin-left: 25px;
     display: none;
+    margin-top: 45px;
 }
 .codeWritten2{
     width: 50%;
@@ -72,6 +75,7 @@
     position: absolute;
     margin-left: 25px;
     display: none;
+    margin-top: 45px;
 }
 .codeWritten3{
     width: 50%;
@@ -80,6 +84,7 @@
     position: absolute;
     margin-left: 25px;
     display: none;
+    margin-top: 45px;
 }
 .codeWritten4{
     width: 50%;
@@ -88,6 +93,7 @@
     position: absolute;
     margin-left: 25px;
     display: none;
+    margin-top: 45px;
 }
 .codeWritten5{
     width: 50%;
@@ -96,6 +102,52 @@
     position: absolute;
     margin-left: 25px;
     display: none;
+    margin-top: 45px;
+}
+.codeWritten6{
+    width: 50%;
+    font-weight: bold;
+    border: 1px dashed red;
+    position: absolute;
+    margin-left: 25px;
+    display: none;
+    margin-top: 45px;
+}
+.codeWritten7{
+    width: 50%;
+    font-weight: bold;
+    border: 1px dashed red;
+    position: absolute;
+    margin-left: 25px;
+    display: none;
+    margin-top: 45px;
+}
+.codeWritten8{
+    width: 50%;
+    font-weight: bold;
+    border: 1px dashed red;
+    position: absolute;
+    margin-left: 25px;
+    display: none;
+    margin-top: 45px;
+}
+.codeWritten9{
+    width: 50%;
+    font-weight: bold;
+    border: 1px dashed red;
+    position: absolute;
+    margin-left: 25px;
+    display: none;
+    margin-top: 45px;
+}
+.codeWritten10{
+    width: 50%;
+    font-weight: bold;
+    border: 1px dashed red;
+    position: absolute;
+    margin-left: 25px;
+    display: none;
+    margin-top: 45px;
 }
 .runner{
     border-radius: 25px;
@@ -104,15 +156,16 @@
     position: absolute;
     bottom: 5px;
     left: 25px;
+    width: 150px;
+    font-size: large;
 }
 .runner:focus{
     outline: none;
 }
 .result{
     display: flex;
-    float: right;
     width: 50%;
-    margin-top: 45px;
+    margin-top: 20px;
     font-weight: bold;
     position: relative;
 }
@@ -137,6 +190,31 @@
     display: none;
 }
 .Result5{
+    position: absolute;
+    margin-left: 55px;
+    display: none;
+}
+.Result6{
+    position: absolute;
+    margin-left: 55px;
+    display: none;
+}
+.Result7{
+    position: absolute;
+    margin-left: 55px;
+    display: none;
+}
+.Result8{
+    position: absolute;
+    margin-left: 55px;
+    display: none;
+}
+.Result9{
+    position: absolute;
+    margin-left: 55px;
+    display: none;
+}
+.Result10{
     position: absolute;
     margin-left: 55px;
     display: none;
@@ -267,4 +345,21 @@ button {
 }
 .navigation:focus{
     outline: none;
+}
+.savarjiSoebi{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+h5{
+    margin: auto 180px;
+}
+.davaleba12{
+    border: 1px solid black;
+}
+.davaleba3{
+    border: 1px solid black;
+}
+.davaleba4{
+    border: 1px solid black;
 }
