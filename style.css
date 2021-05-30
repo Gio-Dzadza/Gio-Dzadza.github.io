@@ -400,3 +400,26 @@ body.dark{
     top: 2px;
     transition: transform 0.2s linear;
 }
+.spinner{
+    height: 20px;
+    width: 20px;
+    animation: spinner 2.7s linear infinite;
+    position: absolute;
+
+}
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.svg{
+    margin: 0px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
