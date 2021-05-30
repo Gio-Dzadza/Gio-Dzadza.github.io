@@ -1060,7 +1060,7 @@ function clickChange(){
 //button.addEventListener('click', function(event//aq chawerili pirveli properti (saxels mnishvneloba ar aqvs) aris event properti)){
 // });
 //button.addEventListener('click', function(event){
-//   event.type//amoagdebs click-s anu gvetyvvis, rom es funqcia sruldeba am elementsi clizk-ze.
+//   event.type//amoagdebs click-s anu gvetyvvis, rom es funqcia sruldeba am elementsi click-ze.
 // });
 // tu am kods davlogavt vnaxavt, rom didi obieqti daibechdeba, am obieqtshi type-is garda,
 //aseve mnishvnelovania target-i, mas uweria, is elementi, romel elementze amoqmedda es funqcia.
@@ -1468,6 +1468,9 @@ fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides')
             slide1.classList.add('slide');
             slidesContainer.appendChild(slide1);
 
+            // let img = new Image(slide.image);
+            // img.src = slide.image;
+            // slide1.innerHTML = img;//ar imushava
             slide1.innerHTML = `<h3 class="title">${slide.title}</h3> <img alt="pic" style="width: 500px" src="${slide.image}">`;
 
             let currentSlide = 0;
@@ -1495,7 +1498,17 @@ fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides')
     })
     .catch(error => {
         console.log(error);
-    })
+    });
+
+//darkmode
+const checkBox = document.querySelector('#checkbox');
+let body = document.querySelector("body");
+
+function darkMode(){
+    body.classList.toggle('dark')
+}
+
+checkBox.addEventListener('change', darkMode);
 
 //ar imushava 404 async function getImage() {
 //     let response = await fetch('https://us-central1-js04-b4877.cloudfunctions.net/api/slides');
